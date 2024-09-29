@@ -335,6 +335,7 @@ section {
     border-radius: 50%;
     display: flex;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* задаємо плавність зміни кольору при наведенні для фону*/
 }
 .link_ {
     display: flex;
@@ -346,4 +347,9 @@ section {
 }
 .footer-descripton {
     margin-bottom: 16px;
+}
+.social-media-link.bigsize:hover, 
+.social-media-link.bigsize:focus {
+    background-color: #31D0AA;
+
 }
