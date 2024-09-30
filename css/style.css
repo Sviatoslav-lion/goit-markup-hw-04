@@ -208,6 +208,16 @@ section {
 .advantages-item {
     width: calc((100% - 72px) / 4);
 }
+.advantages-item-icon {
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
 /* ============================= section team =========================================*/
 .section-title {
     font-weight: 700;
@@ -238,7 +248,8 @@ section {
     border-radius: 0px 0px 4px 4px;
 }
 .text-box {
-    padding: 32px 0;
+    margin: 32px 16px 32px 16px;
+    /*padding: 32px 0;*/
 }
 .face-img {
    
@@ -257,6 +268,7 @@ section {
 .team-description {
     color: #434455;
     text-align: center;
+    margin-bottom: 8px;
 }
 
 .title {
@@ -269,7 +281,26 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+.team-item-social-media-list {
+    display: flex;
+    align-items: center;
+    justify-items:normal;
+    gap: 24px;
 
+}
+.social-media-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* задаємо плавність зміни кольору при наведенні для фону*/
+}
+.social-media-link:hover,
+.social-media-link:focus {
+    background-color: #404bbf;
+}
 /* ============================ section portfolio ===================================*/
 .section-portfolio {
     padding-top: 120px; 
@@ -286,13 +317,45 @@ section {
     width: calc((100% - 48px) / 3);
     background-color: #fff;
 }
+.portfolio-img-box {
+    position: relative;
+    overflow: hidden;
+}
 .portfolio-box {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none; /* для скидання стилів обводки для верхнього краю контейнера */
 }
+.portfolio-item:hover .overlay,
+.portfolio-item:focus .overlay,
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 
+    0 2px 1px 0 rgba(46, 47, 66, 0.08), 
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 
+    0 1px 6px 0 rgba(46, 47, 66, 0.08)
+    ;
+    transform:translateY(0);
+}
 
 
+.overlay {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+    padding: 40px 32px 164px 32px; /* top right  bottom left */
+}
 /* ============================ footer ===================================*/
 .footer {
     padding: 100px 0;
