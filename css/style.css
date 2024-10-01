@@ -135,8 +135,7 @@ section {
     background-color: #2e2f42;
     background-image: linear-gradient( 
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-        ), 
+        rgba(46, 47, 66, 0.7)        ), 
         url(../images/hero_image.jpg);
     background-image: ;
     background-repeat: no-repeat;
